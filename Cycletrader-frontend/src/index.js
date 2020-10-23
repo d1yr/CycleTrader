@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', e => {
 console.log('what the hell?')
 const baseUrl = "http://localhost:3000/users/"
 const baseUrlBikes = "http://localhost:3000/bicycles/"
-const userDet = document.querySelector('#detailed-info')
+const userBar = document.querySelector('#user-bar')
 
 
 const getUsers = () => {
@@ -44,7 +44,8 @@ const renderUserDetails = user => {
 
 
 const clickHandler = () => {
-    document.addEventListener('click', e => {
+    userBar.addEventListener('click', e => {
+        
         if(e.target.matches('#user-bar span')){
             const userId = e.target.dataset.userId
 
@@ -66,8 +67,6 @@ const clickHandler = () => {
             .then(renderBicycles)
         }
         const renderBicycles = bicycles => {
-            const bikeUl = document.querySelector('#bikes')
-            bikeUl.innerHTML += `<button class="addBike">Add Bicycle</button>`
             for(const bicycle of bicycles){
             renderBicycle(bicycle)
             if(bicycle.user_id == e.target.dataset.userId){
@@ -125,7 +124,7 @@ const clickHandler = () => {
                 info.innerHTML += "<br>"
                 info.innerHTML += `<button class="deleteBike">Delete Bicycle</button>`
                 info.innerHTML += "<br>"
-                info.innerHTML += `<button class="editBike">Edit Bicycle</button>`
+                info.innerHTML += `<button class="editBike" data-bike-Id=${bicycle.id}>Edit Bicycle</button>`
                 info.dataset.userId = bicycle.user_id
                 info.dataset.bikeId = bicycle.id
 
@@ -140,28 +139,27 @@ const clickHandler = () => {
 
         }})
         document.addEventListener('click', e => {
-            if(e.target.matches('.addBike')){
-
-                console.log(e.target)
+            if(e.target.textContent === 'Edit Bicycle'){
+                const button = e.target
             const info = document.querySelector('#bikes')
-            info.innerHTML += `<form id='edit-bike-form' class="padding margin border-round border-grey">
+            info.innerHTML += `<form id='edit-bike-form' class="bike-form">
             <input type="hidden" value= "bikeId" id= "bikeId"/>Brand:
-            <input type="text" name="brand" placeholder="Bike Brand" value="" />
+            <input type="text" name="brand" id="brand" />
             Model:
-            <input type="text" name="model" placeholder="Bike Model" value="" />
-            Size:<input type="number" name="size" min='1' max='70' value="" />
+            <input type="text" name="model" id="model />
+            Size:<input type="number" id="size" min='1' max='70' value="" />
             <br>
             <label for="gearset">Gearset:</label>
-            <select id="gearset" name="gearset">
+            <select id="gearset" id="gearset">
             <option value="Campagnolo">Campagnolo</option>
             <option value="Shimano">Shimano</option>
             <option value="SRAM">SRAM</option>
             </select>
-            Front Chainring:<input type="number" name="frontG" min='1' max='3' value="" />
-            Rear Cog:<input type="number" name="rearG" min='1' max='11' value="" />
+            Front Chainring:<input type="number" id="frontG" min='1' max='3' value="" />
+            Rear Cog:<input type="number" id="rearG" min='1' max='11' value="" />
             <br>
             <label for="condition">Condition:</label>
-            <select id="condition" name="condition">
+            <select id="condition" id="condition">
             <option value="new">New</option>
             <option value="excellent">Excellent</option>
             <option value="good">Good</option>
@@ -172,10 +170,56 @@ const clickHandler = () => {
 
 
           </form>`
+          const form = document.querySelector('#edit-bike-form')
+          form.model.value = model
+          form.brand.value = brand
+          form.size.value = size
+          form.gearset.value = gearset
+          form.frontG.value = frontG
+          form.rearG.value = rearG
+          form.condition.value = condition
+          console.log(button.dataset.bikeId)
+
+
+          
           
             
                 
+          const submitHandler = () => { 
 
+            const form = document.querySelector('#edit-bike-form')
+            form.addEventListener('submit', e => {
+            e.preventDefault()
+            
+          const model = form.model.value
+          const brand = form.brand.value
+          const size = form.size.value
+          const gearset = form.gearset.value
+          const frontG = form.frontG.value
+          const rearG = form.rearG.value
+          const condition = form.condition.value
+          const bikeId = e.target.parentElement.dataset.bikeId
+
+          const updatedBike = {brand: brand, model: model, size: size, gearset: gearset, frontG: frontG, rearG: rearG, condition: condition}
+          const options = {
+            method: "PATCH",
+            headers: {
+                "content-type": "application/json",
+                "accept": "application/json",
+            },
+            body: JSON.stringify(updatedBike)
+        }
+          
+        fetch(baseURL + bikeId, options)
+            .then(resp => resp.json())
+            .then(_bike => {
+                getBikes()
+            })
+        
+                
+            })
+        }
+        submitHandler ()
             
             
 
@@ -187,8 +231,10 @@ const clickHandler = () => {
     })
     
 }
+
+
 function deleteData(item, url) {
-    return fetch(url + '/' + item, {
+    return fetch(url + item, {
       method: 'delete'
     }).then(response =>
       response.json().then(json => {

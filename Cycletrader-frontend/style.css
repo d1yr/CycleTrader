@@ -1,10 +1,18 @@
+
+body {
+    background-image: linear-gradient(to right, red , yellow);
+  }
 #user-bar {
     height: 15vh;
-    background: white;
+    
     display: flex;
     justify-content: flex-start;
     align-items: left;
     padding-bottom: 3vh;
+  }
+
+  .userInfo {
+    background-image: linear-gradient(to right, orange , yellow);
   }
 
 .yellowBar {
@@ -62,7 +70,7 @@
     display: flex;
     justify-content: center;
     font-size: 3vh;
-    background: violet;
+    background: orange;
     align-items: center;
     border: 3px solid black;
   }
@@ -73,6 +81,15 @@
     font-size: 24px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 201px rgba(255, 255, 255, 0.6);
   }
 
-  
+  p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  span{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+  }
