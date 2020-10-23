@@ -1,0 +1,29 @@
+#user-bar {
+    height: 15vh;
+    background: rgb(49, 109, 179);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 3vh;
+  }
+
+  #user-bar span {
+    padding: 1%;
+    height: 80%;
+    width: 8vw;
+    display: flex;
+    justify-content: center;
+    font-size: 3vh;
+    align-items: center;
+    border-radius: 2em;
+    border: 1px solid white;
+  }
+
+  .userInfo{
+    height: 550px;
+    padding: 30px;
+    font-size: 24px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border: dotted;
+    text-align: center;
+  }
