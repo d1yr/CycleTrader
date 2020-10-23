@@ -54,7 +54,7 @@ const clickHandler = () => {
             .then(renderUserDetails)
 
             const bikeUl = document.querySelector('#bikes')
-            bikeUl.innerHTML = `MY BIKES:`
+            bikeUl.innerHTML = `MY BIKES: <br> <button id="addBike">Add Bicycle</button>`
             
 
             
@@ -132,21 +132,32 @@ const clickHandler = () => {
         }
         document.addEventListener('click', e => {
             if(e.target.matches('.deleteBike')){
+            e.preventDefault()
             bikeId = e.target.parentElement.dataset.bikeId
             deleteData(bikeId, baseUrlBikes)
+            
             
 
 
         }})
+        function deleteData(item, url) {
+            return fetch(url + item, {
+              method: 'delete'
+            })
+            
+          }
         document.addEventListener('click', e => {
             if(e.target.textContent === 'Edit Bicycle'){
                 const button = e.target
+                console.log(e.target.parentElement)
             const info = document.querySelector('#bikes')
             info.innerHTML += `<form id='edit-bike-form' class="bike-form">
-            <input type="hidden" value= "bikeId" id= "bikeId"/>Brand:
-            <input type="text" name="brand" id="brand" />
-            Model:
-            <input type="text" name="model" id="model />
+            <input type="hidden" value="bikeId" id= "bikeId"/>
+            <input type="hidden" value="userId" id= "userId"/>
+            <label for="brand">Brand:</label>
+            <input type="text" id="brand" value=""/>
+            <label for="model">Model:</label>
+            <input type="text" id="model" value="" />
             Size:<input type="number" id="size" min='1' max='70' value="" />
             <br>
             <label for="gearset">Gearset:</label>
@@ -171,15 +182,16 @@ const clickHandler = () => {
 
           </form>`
           const form = document.querySelector('#edit-bike-form')
-          form.model.value = model
+          
+          
           form.brand.value = brand
+          form.model.value = model
           form.size.value = size
           form.gearset.value = gearset
           form.frontG.value = frontG
           form.rearG.value = rearG
           form.condition.value = condition
-          console.log(button.dataset.bikeId)
-
+          form.userId.value = userId
 
           
           
@@ -191,6 +203,7 @@ const clickHandler = () => {
             form.addEventListener('submit', e => {
             e.preventDefault()
             
+          
           const model = form.model.value
           const brand = form.brand.value
           const size = form.size.value
@@ -198,9 +211,11 @@ const clickHandler = () => {
           const frontG = form.frontG.value
           const rearG = form.rearG.value
           const condition = form.condition.value
-          const bikeId = e.target.parentElement.dataset.bikeId
+          const user = form.userId.value
+            
 
-          const updatedBike = {brand: brand, model: model, size: size, gearset: gearset, frontG: frontG, rearG: rearG, condition: condition}
+          const updatedBike = {brand: brand, model: model, size: size, gearset: gearset, frontG: frontG, rearG: rearG, condition: condition, user: user}
+          console.log(updatedBike)
           const options = {
             method: "PATCH",
             headers: {
@@ -210,11 +225,12 @@ const clickHandler = () => {
             body: JSON.stringify(updatedBike)
         }
           
-        fetch(baseURL + bikeId, options)
+        fetch(baseUrlBikes + bikeId, options)
             .then(resp => resp.json())
             .then(_bike => {
                 getBikes()
             })
+            
         
                 
             })
@@ -231,17 +247,6 @@ const clickHandler = () => {
     })
     
 }
-
-
-function deleteData(item, url) {
-    return fetch(url + item, {
-      method: 'delete'
-    }).then(response =>
-      response.json().then(json => {
-        return json;
-      })
-    );
-  }
 
 
 
