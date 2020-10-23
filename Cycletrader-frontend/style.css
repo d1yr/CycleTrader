@@ -3,7 +3,7 @@ body {
     background-image: linear-gradient(to right, purple , teal);
   }
 #user-bar {
-    height: 15vh;
+    height: 10vh;
     
     display: flex;
     justify-content: flex-start;
@@ -70,9 +70,9 @@ body {
     display: flex;
     justify-content: center;
     font-size: 3vh;
-    background: orange;
+    background: rgb(64, 204, 214);
     align-items: center;
-    border: 3px solid black;
+    border: 1px solid rgb(85, 54, 83);
   }
 
   .userInfo{

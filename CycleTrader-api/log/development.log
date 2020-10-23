@@ -24265,3 +24265,1518 @@ Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 1554)
 Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 2671)
 
 
+Started GET "/users/" for ::1 at 2020-10-23 13:41:20 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 2.7ms | Allocations: 1419)
+
+
+Started GET "/users/4" for ::1 at 2020-10-23 13:41:33 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:41:33 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.6ms | Allocations: 2108)
+
+
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 2.0ms | Allocations: 2819)
+
+
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:41:36 -0400
+Started GET "/users/3" for ::1 at 2020-10-23 13:41:36 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mBicycle Load (0.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 2451)
+
+
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 2624)
+
+
+Started GET "/users/2" for ::1 at 2020-10-23 13:41:37 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:41:37 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.6ms | Allocations: 2018)
+
+
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 1.3ms | Allocations: 2820)
+
+
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:41:38 -0400
+Started GET "/users/1" for ::1 at 2020-10-23 13:41:38 -0400
+Processing by BicyclesController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBicycle Load (0.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 2028)
+
+
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 2769)
+
+
+Started GET "/users/3" for ::1 at 2020-10-23 13:41:40 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:41:40 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 2019)
+
+
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 2624)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:41:41 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 825)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:41:41 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (1.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:41:41 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:41:41 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:41:41 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/users/4" for ::1 at 2020-10-23 13:41:55 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:41:55 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (1.1ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 1434)
+
+
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 1.1ms | Allocations: 2740)
+
+
+Started GET "/users/2" for ::1 at 2020-10-23 13:42:04 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:42:04 -0400
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 6.2ms | Allocations: 995)
+
+
+Processing by BicyclesController#index as */*
+  [1m[36mBicycle Load (10.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 3.3ms | ActiveRecord: 10.5ms | Allocations: 1915)
+
+
+Started GET "/users/3" for ::1 at 2020-10-23 13:42:05 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:42:05 -0400
+Processing by BicyclesController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mBicycle Load (0.8ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.8ms | Allocations: 2031)
+
+
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 2819)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:06 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.8ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:06 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (2.0ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 2.0ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:06 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:06 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:06 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (2.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 2.3ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:06 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:06 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:06 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 822)
+
+
+Started GET "/users/2" for ::1 at 2020-10-23 13:42:07 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:42:07 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (0.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 2451)
+
+
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 2624)
+
+
+Started GET "/bicycles/2" for ::1 at 2020-10-23 13:42:08 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (1.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 825)
+
+
+Started GET "/bicycles/2" for ::1 at 2020-10-23 13:42:08 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 822)
+
+
+Started GET "/bicycles/2" for ::1 at 2020-10-23 13:42:08 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 822)
+
+
+Started GET "/bicycles/2" for ::1 at 2020-10-23 13:42:08 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 822)
+
+
+Started GET "/bicycles/2" for ::1 at 2020-10-23 13:42:08 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (1.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.4ms | Allocations: 822)
+
+
+Started GET "/bicycles/2" for ::1 at 2020-10-23 13:42:08 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 825)
+
+
+Started GET "/bicycles/2" for ::1 at 2020-10-23 13:42:08 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (0.8ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 822)
+
+
+Started GET "/bicycles/2" for ::1 at 2020-10-23 13:42:08 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 822)
+
+
+Started GET "/bicycles/2" for ::1 at 2020-10-23 13:42:08 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started GET "/users/4" for ::1 at 2020-10-23 13:42:09 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:42:09 -0400
+Processing by BicyclesController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 2476)
+
+
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 2611)
+
+
+Started GET "/bicycles/6" for ::1 at 2020-10-23 13:42:11 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/bicycles/6" for ::1 at 2020-10-23 13:42:11 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started GET "/bicycles/6" for ::1 at 2020-10-23 13:42:11 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/bicycles/6" for ::1 at 2020-10-23 13:42:11 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 822)
+
+
+Started GET "/bicycles/6" for ::1 at 2020-10-23 13:42:11 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/bicycles/6" for ::1 at 2020-10-23 13:42:11 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/bicycles/6" for ::1 at 2020-10-23 13:42:11 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 822)
+
+
+Started GET "/bicycles/6" for ::1 at 2020-10-23 13:42:11 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/bicycles/6" for ::1 at 2020-10-23 13:42:11 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mBicycle Load (1.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 1.2ms | Allocations: 822)
+
+
+Started GET "/bicycles/6" for ::1 at 2020-10-23 13:42:11 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/users/4" for ::1 at 2020-10-23 13:42:12 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:42:12 -0400
+Processing by BicyclesController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.8ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms | Allocations: 2464)
+
+
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 2624)
+
+
+Started GET "/users/3" for ::1 at 2020-10-23 13:42:12 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:42:12 -0400
+Processing by BicyclesController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 2464)
+
+
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 2624)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:14 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:15 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (1.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.3ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:15 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:15 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:15 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (1.7ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.7ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:15 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:15 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:15 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:15 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:15 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:15 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:42:15 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 822)
+
+
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:44:34 -0400
+Processing by BicyclesController#index as */*
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1915)
+
+
+Started GET "/users/" for ::1 at 2020-10-23 13:44:51 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.4ms | Allocations: 1422)
+
+
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:44:52 -0400
+Started GET "/users/3" for ::1 at 2020-10-23 13:44:52 -0400
+Processing by BicyclesController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mBicycle Load (0.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 2464)
+
+
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 2624)
+
+
+Started GET "/bicycles/5" for ::1 at 2020-10-23 13:44:53 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started GET "/users/2" for ::1 at 2020-10-23 13:45:27 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:45:27 -0400
+Processing by BicyclesController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (0.9ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.9ms | Allocations: 1997)
+
+
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 5.7ms | Allocations: 2819)
+
+
+Started GET "/users/4" for ::1 at 2020-10-23 13:46:33 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:46:33 -0400
+Processing by BicyclesController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 2464)
+
+
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 2624)
+
+
+Started GET "/bicycles/6" for ::1 at 2020-10-23 13:46:36 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/bicycles/6" for ::1 at 2020-10-23 13:46:36 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mBicycle Load (1.0ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 822)
+
+
+Started GET "/bicycles/6" for ::1 at 2020-10-23 13:46:36 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mBicycle Load (0.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 822)
+
+
+Started GET "/users/3" for ::1 at 2020-10-23 13:49:23 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:49:23 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mBicycle Load (0.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 2624)
+
+
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 2451)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:49:24 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:49:24 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (1.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:49:24 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 822)
+
+
+Started GET "/bicycles/4" for ::1 at 2020-10-23 13:49:24 -0400
+Processing by BicyclesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 822)
+
+
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:25 -0400
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+  [1m[35m (3.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bicycles_controller.rb:38:in `destroy'
+  [1m[36mBicycle Destroy (0.6ms)[0m  [1m[31mDELETE FROM "bicycles" WHERE "bicycles"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/bicycles_controller.rb:38:in `destroy'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bicycles_controller.rb:38:in `destroy'
+Completed 204 No Content in 11ms (ActiveRecord: 5.6ms | Allocations: 3144)
+
+
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:25 -0400
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.9ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.9ms | Allocations: 656)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:25 -0400
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:25 -0400
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 674)
+
+
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:25 -0400
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+  [1m[36mBicycle Load (19.7ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 23ms (ActiveRecord: 19.7ms | Allocations: 28833)
+
+
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+Processing by BicyclesController#destroy as */*
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+  Parameters: {"id"=>"4"}
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+  [1m[36mBicycle Load (26.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+Completed 404 Not Found in 30ms (ActiveRecord: 26.5ms | Allocations: 28975)
+
+
+Processing by BicyclesController#destroy as */*
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+  Parameters: {"id"=>"4"}
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+  [1m[36mBicycle Load (1.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 4ms (ActiveRecord: 1.6ms | Allocations: 1475)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (1.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 4ms (ActiveRecord: 1.6ms | Allocations: 1102)
+
+
+Processing by BicyclesController#destroy as */*
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+  Parameters: {"id"=>"4"}
+Processing by BicyclesController#destroy as */*
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+  [1m[36mBicycle Load (2.1ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+  [1m[36mBicycle Load (19.8ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Parameters: {"id"=>"4"}
+Completed 404 Not Found in 4ms (ActiveRecord: 2.1ms | Allocations: 2468)
+
+
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 32ms (ActiveRecord: 21.0ms | Allocations: 34869)
+
+
+Processing by BicyclesController#destroy as */*
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+  [1m[36mBicycle Load (24.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Parameters: {"id"=>"4"}
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Processing by BicyclesController#destroy as */*
+  [1m[36mBicycle Load (0.8ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+  Parameters: {"id"=>"4"}
+Processing by BicyclesController#destroy as */*
+Completed 404 Not Found in 24ms (ActiveRecord: 0.8ms | Allocations: 28696)
+
+
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+Completed 404 Not Found in 31ms (ActiveRecord: 25.5ms | Allocations: 30317)
+
+
+  Parameters: {"id"=>"4"}
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+  [1m[36mBicycle Load (25.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+  [1m[36mBicycle Load (25.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 47ms (ActiveRecord: 25.5ms | Allocations: 56247)
+
+
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Processing by BicyclesController#destroy as */*
+Completed 404 Not Found in 52ms (ActiveRecord: 26.1ms | Allocations: 59005)
+
+
+  Parameters: {"id"=>"4"}
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Processing by BicyclesController#destroy as */*
+  [1m[36mBicycle Load (32.8ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Parameters: {"id"=>"4"}
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Processing by BicyclesController#destroy as */*
+  [1m[36mBicycle Load (1.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 36ms (ActiveRecord: 32.8ms | Allocations: 29103)
+
+
+  Parameters: {"id"=>"4"}
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 4ms (ActiveRecord: 1.4ms | Allocations: 1560)
+
+
+  [1m[36mBicycle Load (22.9ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 55ms (ActiveRecord: 22.9ms | Allocations: 56770)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms | Allocations: 660)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (1.0ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.7ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.7ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Started DELETE "/bicycles/4" for ::1 at 2020-10-23 13:49:26 -0400
+Processing by BicyclesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bicycle with 'id'=4):
+  
+app/controllers/bicycles_controller.rb:44:in `set_bicycle'
+Started GET "/users/" for ::1 at 2020-10-23 13:49:46 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.5ms | Allocations: 1418)
+
+
+Started GET "/users/3" for ::1 at 2020-10-23 13:49:47 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:49:47 -0400
+Processing by BicyclesController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1434)
+
+
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.6ms | Allocations: 2557)
+
+
+Started GET "/users/2" for ::1 at 2020-10-23 13:49:48 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:49:48 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1430)
+
+
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.6ms | Allocations: 2760)
+
+
+Started GET "/users/4" for ::1 at 2020-10-23 13:49:49 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:49:49 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 2445)
+
+
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 2272)
+
+
+Started GET "/bicycles/" for ::1 at 2020-10-23 13:49:49 -0400
+Started GET "/users/1" for ::1 at 2020-10-23 13:49:49 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 2272)
+
+
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 2447)
+
+
+Started GET "/users/" for ::1 at 2020-10-23 15:05:17 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.7ms | Allocations: 1478)
+
+
+Started GET "/users/" for ::1 at 2020-10-23 15:05:40 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1419)
+
+
+Started GET "/users/" for ::1 at 2020-10-23 15:06:34 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1419)
+
+
+Started GET "/bicycles/" for ::1 at 2020-10-23 15:06:37 -0400
+Started GET "/users/1" for ::1 at 2020-10-23 15:06:37 -0400
+Processing by BicyclesController#index as */*
+  [1m[36mBicycle Load (0.7ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.7ms | Allocations: 1751)
+
+
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 867)
+
+
+Started GET "/bicycles/" for ::1 at 2020-10-23 15:06:41 -0400
+Started GET "/users/2" for ::1 at 2020-10-23 15:06:41 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (1.0ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.0ms | Allocations: 1850)
+
+
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 4.6ms | Allocations: 2683)
+
+
+Started GET "/users/3" for ::1 at 2020-10-23 15:06:41 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 15:06:41 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mBicycle Load (0.7ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.7ms | Allocations: 1840)
+
+
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 2640)
+
+
+Started GET "/bicycles/" for ::1 at 2020-10-23 15:06:43 -0400
+Started GET "/users/4" for ::1 at 2020-10-23 15:06:43 -0400
+Processing by BicyclesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mBicycle Load (0.7ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  Parameters: {"id"=>"4"}
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.7ms | Allocations: 2030)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 1987)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (44.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "CycleTrader_api_development"[0m
+  [1m[35m (25.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "CycleTrader_api_test"[0m
+  [1m[35m (104.7ms)[0m  [1m[35mCREATE DATABASE "CycleTrader_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (42.3ms)[0m  [1m[35mCREATE DATABASE "CycleTrader_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "bicycles" CASCADE[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "bicycles" ("id" bigserial primary key, "brand" character varying, "model" character varying, "size" integer, "frontG" integer, "rearG" integer, "gearset" character varying, "condition" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE  INDEX  "index_bicycles_on_user_id" ON "bicycles"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "location" character varying, "bio" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (10.8ms)[0m  [1m[35mALTER TABLE "bicycles" ADD CONSTRAINT "fk_rails_7b3f9b24c3"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20201022140842)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20201022140834);
+
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-23 19:06:58.922585"], ["updated_at", "2020-10-23 19:06:58.922585"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "8f4652c6bac5adb1d4773c6ae12ce5fbc66455af"], ["created_at", "2020-10-23 19:06:58.929244"], ["updated_at", "2020-10-23 19:06:58.929244"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "bicycles" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "bicycles" ("id" bigserial primary key, "brand" character varying, "model" character varying, "size" integer, "frontG" integer, "rearG" integer, "gearset" character varying, "condition" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_bicycles_on_user_id" ON "bicycles"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "location" character varying, "bio" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "bicycles" ADD CONSTRAINT "fk_rails_7b3f9b24c3"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20201022140842)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20201022140834);
+
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-23 19:06:58.979552"], ["updated_at", "2020-10-23 19:06:58.979552"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-10-23 19:06:58.983628"], ["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "8f4652c6bac5adb1d4773c6ae12ce5fbc66455af"], ["created_at", "2020-10-23 19:06:58.988312"], ["updated_at", "2020-10-23 19:06:58.988312"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "location", "bio", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Steve"], ["location", "Brooklyn, NY"], ["bio", "I only really ride when its nice out."], ["email", "bikelover@gmail.com"], ["created_at", "2020-10-23 19:06:59.039794"], ["updated_at", "2020-10-23 19:06:59.039794"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "location", "bio", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jack"], ["location", "Manhattan, NY"], ["bio", "All my bikes are fast!"], ["email", "bikeguy@bikes.com"], ["created_at", "2020-10-23 19:06:59.043507"], ["updated_at", "2020-10-23 19:06:59.043507"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "location", "bio", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Anna"], ["location", "Brooklyn, NY"], ["bio", "i like bikes!"], ["email", "anna@gmail.com"], ["created_at", "2020-10-23 19:06:59.046634"], ["updated_at", "2020-10-23 19:06:59.046634"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "location", "bio", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Emma"], ["location", "Queens, NY"], ["bio", "I ride for fun mostly"], ["email", "emma@hotmail.com"], ["created_at", "2020-10-23 19:06:59.058310"], ["updated_at", "2020-10-23 19:06:59.058310"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "Kestrel"], ["model", "Sci500"], ["size", 52], ["frontG", 3], ["rearG", 9], ["gearset", "Shimano"], ["condition", "new"], ["user_id", 1], ["created_at", "2020-10-23 19:06:59.078916"], ["updated_at", "2020-10-23 19:06:59.078916"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.3ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "Specialized"], ["model", "Roubaix"], ["size", 55], ["frontG", 3], ["rearG", 9], ["gearset", "Shimano"], ["condition", "new"], ["user_id", 2], ["created_at", "2020-10-23 19:06:59.084002"], ["updated_at", "2020-10-23 19:06:59.084002"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.4ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "Kuota"], ["model", "22Y"], ["size", 53], ["frontG", 3], ["rearG", 9], ["gearset", "Campagnolo"], ["condition", "new"], ["user_id", 2], ["created_at", "2020-10-23 19:06:59.092207"], ["updated_at", "2020-10-23 19:06:59.092207"]]
+  [1m[35m (19.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.5ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "Schwinn"], ["model", "Cruiser"], ["size", 61], ["frontG", 1], ["rearG", 1], ["gearset", "Shimano"], ["condition", "new"], ["user_id", 3], ["created_at", "2020-10-23 19:06:59.116184"], ["updated_at", "2020-10-23 19:06:59.116184"]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.4ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "Schwinn"], ["model", "Cruiser"], ["size", 41], ["frontG", 1], ["rearG", 1], ["gearset", "Shimano"], ["condition", "good"], ["user_id", 3], ["created_at", "2020-10-23 19:06:59.125093"], ["updated_at", "2020-10-23 19:06:59.125093"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.4ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "Trek"], ["model", "Madone"], ["size", 57], ["frontG", 2], ["rearG", 11], ["gearset", "Shimano"], ["condition", "new"], ["user_id", 4], ["created_at", "2020-10-23 19:06:59.129672"], ["updated_at", "2020-10-23 19:06:59.129672"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/" for ::1 at 2020-10-23 15:09:10 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 3.6ms | Allocations: 7604)
+
+
+Started GET "/users/" for ::1 at 2020-10-23 15:09:34 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1437)
+
+
+Started GET "/users/" for ::1 at 2020-10-23 15:09:54 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1437)
+
+
+Started GET "/users/1" for ::1 at 2020-10-23 15:09:56 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 15:09:56 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 0.9ms | Allocations: 2782)
+
+
+Processing by BicyclesController#index as */*
+  [1m[36mBicycle Load (0.9ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 11.5ms | ActiveRecord: 6.0ms | Allocations: 10176)
+
+
+Started GET "/users/2" for ::1 at 2020-10-23 15:09:57 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 15:09:57 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (0.9ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.9ms | Allocations: 2028)
+
+
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 4.0ms | Allocations: 2863)
+
+
+Started GET "/users/3" for ::1 at 2020-10-23 15:09:58 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 15:09:58 -0400
+Processing by BicyclesController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 2033)
+
+
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 2819)
+
+
+Started GET "/bicycles/" for ::1 at 2020-10-23 15:09:58 -0400
+Started GET "/users/4" for ::1 at 2020-10-23 15:09:58 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 1985)
+
+
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 2.6ms | Allocations: 2819)
+
+
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (33.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "CycleTrader_api_development"[0m
+  [1m[35m (22.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "CycleTrader_api_test"[0m
+  [1m[35m (45.6ms)[0m  [1m[35mCREATE DATABASE "CycleTrader_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (48.7ms)[0m  [1m[35mCREATE DATABASE "CycleTrader_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "bicycles" CASCADE[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "bicycles" ("id" bigserial primary key, "brand" character varying, "model" character varying, "size" integer, "frontG" integer, "rearG" integer, "gearset" character varying, "condition" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_bicycles_on_user_id" ON "bicycles"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "location" character varying, "bio" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "bicycles" ADD CONSTRAINT "fk_rails_7b3f9b24c3"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20201022140842)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20201022140834);
+
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-23 19:13:09.124709"], ["updated_at", "2020-10-23 19:13:09.124709"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "8f4652c6bac5adb1d4773c6ae12ce5fbc66455af"], ["created_at", "2020-10-23 19:13:09.132435"], ["updated_at", "2020-10-23 19:13:09.132435"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "bicycles" CASCADE[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "bicycles" ("id" bigserial primary key, "brand" character varying, "model" character varying, "size" integer, "frontG" integer, "rearG" integer, "gearset" character varying, "condition" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_bicycles_on_user_id" ON "bicycles"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "location" character varying, "bio" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "bicycles" ADD CONSTRAINT "fk_rails_7b3f9b24c3"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20201022140842)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20201022140834);
+
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-23 19:13:09.189301"], ["updated_at", "2020-10-23 19:13:09.189301"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-10-23 19:13:09.193930"], ["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "8f4652c6bac5adb1d4773c6ae12ce5fbc66455af"], ["created_at", "2020-10-23 19:13:09.199456"], ["updated_at", "2020-10-23 19:13:09.199456"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "location", "bio", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Steve"], ["location", "Brooklyn, NY"], ["bio", "I only really ride when its nice out."], ["email", "bikelover@gmail.com"], ["created_at", "2020-10-23 19:13:09.247655"], ["updated_at", "2020-10-23 19:13:09.247655"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "location", "bio", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jack"], ["location", "Manhattan, NY"], ["bio", "All my bikes are fast!"], ["email", "bikeguy@bikes.com"], ["created_at", "2020-10-23 19:13:09.251701"], ["updated_at", "2020-10-23 19:13:09.251701"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "location", "bio", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Anna"], ["location", "Brooklyn, NY"], ["bio", "i like bikes!"], ["email", "anna@gmail.com"], ["created_at", "2020-10-23 19:13:09.254268"], ["updated_at", "2020-10-23 19:13:09.254268"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "location", "bio", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Emma"], ["location", "Queens, NY"], ["bio", "I ride for fun mostly"], ["email", "emma@hotmail.com"], ["created_at", "2020-10-23 19:13:09.257154"], ["updated_at", "2020-10-23 19:13:09.257154"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "location", "bio", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Alice"], ["location", "Newark, NJ"], ["bio", "I'm just clearing out my garage."], ["email", "Alice11@hotmail.com"], ["created_at", "2020-10-23 19:13:09.259564"], ["updated_at", "2020-10-23 19:13:09.259564"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.8ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "Kestrel"], ["model", "Sci500"], ["size", 52], ["frontG", 3], ["rearG", 9], ["gearset", "Shimano"], ["condition", "new"], ["user_id", 1], ["created_at", "2020-10-23 19:13:09.276554"], ["updated_at", "2020-10-23 19:13:09.276554"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.2ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "Specialized"], ["model", "Roubaix"], ["size", 55], ["frontG", 3], ["rearG", 9], ["gearset", "Shimano"], ["condition", "new"], ["user_id", 2], ["created_at", "2020-10-23 19:13:09.281361"], ["updated_at", "2020-10-23 19:13:09.281361"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.2ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "Kuota"], ["model", "22Y"], ["size", 53], ["frontG", 3], ["rearG", 9], ["gearset", "Campagnolo"], ["condition", "new"], ["user_id", 2], ["created_at", "2020-10-23 19:13:09.285022"], ["updated_at", "2020-10-23 19:13:09.285022"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.2ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "Schwinn"], ["model", "Cruiser"], ["size", 61], ["frontG", 1], ["rearG", 1], ["gearset", "Shimano"], ["condition", "new"], ["user_id", 3], ["created_at", "2020-10-23 19:13:09.288603"], ["updated_at", "2020-10-23 19:13:09.288603"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.2ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "Schwinn"], ["model", "Cruiser"], ["size", 41], ["frontG", 1], ["rearG", 1], ["gearset", "Shimano"], ["condition", "good"], ["user_id", 4], ["created_at", "2020-10-23 19:13:09.292276"], ["updated_at", "2020-10-23 19:13:09.292276"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "Trek"], ["model", "Madone"], ["size", 57], ["frontG", 2], ["rearG", 11], ["gearset", "Shimano"], ["condition", "new"], ["user_id", 4], ["created_at", "2020-10-23 19:13:09.297161"], ["updated_at", "2020-10-23 19:13:09.297161"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.2ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "Huffy"], ["model", "Unknown"], ["size", 35], ["frontG", 1], ["rearG", 11], ["gearset", "SRAM"], ["condition", "parts"], ["user_id", 4], ["created_at", "2020-10-23 19:13:09.302357"], ["updated_at", "2020-10-23 19:13:09.302357"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.7ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "GT"], ["model", "Dyno"], ["size", 31], ["frontG", 1], ["rearG", 1], ["gearset", "Shimano"], ["condition", "parts"], ["user_id", 5], ["created_at", "2020-10-23 19:13:09.306387"], ["updated_at", "2020-10-23 19:13:09.306387"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBicycle Create (0.2ms)[0m  [1m[32mINSERT INTO "bicycles" ("brand", "model", "size", "frontG", "rearG", "gearset", "condition", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["brand", "Haro"], ["model", "BMX"], ["size", 28], ["frontG", 1], ["rearG", 1], ["gearset", "SRAM"], ["condition", "poor"], ["user_id", 5], ["created_at", "2020-10-23 19:13:09.310663"], ["updated_at", "2020-10-23 19:13:09.310663"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/" for ::1 at 2020-10-23 15:13:15 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 8.0ms | ActiveRecord: 5.3ms | Allocations: 7753)
+
+
+Started GET "/users/5" for ::1 at 2020-10-23 15:13:16 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 15:13:16 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 1249)
+
+
+Processing by BicyclesController#index as */*
+  [1m[36mBicycle Load (0.9ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 10.1ms | ActiveRecord: 6.4ms | Allocations: 10713)
+
+
+Started GET "/bicycles/" for ::1 at 2020-10-23 15:13:19 -0400
+Started GET "/users/4" for ::1 at 2020-10-23 15:13:19 -0400
+Processing by BicyclesController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mBicycle Load (1.3ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 1.3ms | Allocations: 2609)
+
+
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 2.9ms | Allocations: 3421)
+
+
+Started GET "/bicycles/" for ::1 at 2020-10-23 15:13:20 -0400
+Started GET "/users/3" for ::1 at 2020-10-23 15:13:20 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mBicycle Load (0.7ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.7ms | Allocations: 2556)
+
+
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 3356)
+
+
+Started GET "/bicycles/" for ::1 at 2020-10-23 15:13:21 -0400
+Started GET "/users/2" for ::1 at 2020-10-23 15:13:21 -0400
+Processing by BicyclesController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBicycle Load (0.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 2569)
+
+
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 3161)
+
+
+Started GET "/users/1" for ::1 at 2020-10-23 15:13:22 -0400
+Started GET "/bicycles/" for ::1 at 2020-10-23 15:13:22 -0400
+Processing by UsersController#show as */*
+Processing by BicyclesController#index as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  ↳ app/controllers/bicycles_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1436)
+
+
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.6ms | Allocations: 3262)
+
+
