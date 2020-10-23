@@ -4,6 +4,7 @@ console.log('what the hell?')
 const baseUrl = "http://localhost:3000/users/"
 const baseUrlBikes = "http://localhost:3000/bicycles/"
 const userBar = document.querySelector('#user-bar')
+const body = document.querySelector("body")
 
 
 const getUsers = () => {
@@ -146,6 +147,88 @@ const clickHandler = () => {
             })
             
           }
+          document.addEventListener('click', e =>{
+              if(e.target.textContent === 'Add Bicycle'){
+                const button = e.target
+                console.log(e.target.parentElement)
+            const info = document.querySelector('#bikes')
+            info.innerHTML += `<form id='add-bike-form' class="add-bike-form">
+            <input type="hidden" value="userId" id= "userId"/>
+            <label for="brand">Brand:</label>
+            <input type="text" id="brand" value=""/>
+            <label for="model">Model:</label>
+            <input type="text" id="model" value="" />
+            Size:<input type="number" id="size" min='1' max='70' value="" />
+            <br>
+            <label for="gearset">Gearset:</label>
+            <select id="gearset" id="gearset">
+            <option value="Campagnolo">Campagnolo</option>
+            <option value="Shimano">Shimano</option>
+            <option value="SRAM">SRAM</option>
+            </select>
+            Front Chainring:<input type="number" id="frontG" min='1' max='3' value="" />
+            Rear Cog:<input type="number" id="rearG" min='1' max='11' value="" />
+            <br>
+            <label for="condition">Condition:</label>
+            <select id="condition" id="condition">
+            <option value="new">New</option>
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="poor">Poor</option>
+            <option value-"parts">Parts</option>
+            </select>
+            <input type="submit" id="submitnew" value="Submit" />
+
+
+          </form>`
+          const form = document.querySelector('#add-bike-form')
+          
+          
+          form.brand.value = brand
+          form.model.value = model
+          form.size.value = size
+          form.gearset.value = gearset
+          form.frontG.value = frontG
+          form.rearG.value = rearG
+          form.condition.value = condition
+          form.userId.value = userId
+
+          const addHandler = () => {
+            const form = document.querySelector('#add-bike-form')
+            form.addEventListener('submitnew', e => {
+            e.preventDefault()
+
+            const model = form.model.value
+          const brand = form.brand.value
+          const size = form.size.value
+          const gearset = form.gearset.value
+          const frontG = form.frontG.value
+          const rearG = form.rearG.value
+          const condition = form.condition.value
+          const user = form.userId.value
+            
+
+          const newBike = {brand: brand, model: model, size: size, gearset: gearset, frontG: frontG, rearG: rearG, condition: condition, user: user}
+          console.log(newBike)
+            })
+            fetch(baseUrlBikes, {
+                method: "POST",
+                body: JSON.stringify(newBike),
+                headers: {
+                    "content-type": "application/json",
+                    "accept": "application/json",
+                }
+            })
+            .then(resp => resp.json())
+            .then(json => {
+                console.log(json)
+            })
+
+
+          }
+          addHandler ()
+              }
+          })
         document.addEventListener('click', e => {
             if(e.target.textContent === 'Edit Bicycle'){
                 const button = e.target

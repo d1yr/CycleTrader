@@ -10,7 +10,7 @@
 steve = User.create(name: "Steve", location: "Brooklyn, NY", bio: "I only really ride when its nice out.", email: "bikelover@gmail.com")
 jack = User.create(name: "Jack", location: "Manhattan, NY", bio: "All my bikes are fast!", email: "bikeguy@bikes.com")
 anna = User.create(name: "Anna", location: "Brooklyn, NY", bio: "i like bikes!", email: "anna@gmail.com")
-emma = User.create(name: "Emma", location: "Queens", bio: "I ride for fun mostly", email: "emma@hotmail.com")
+emma = User.create(name: "Emma", location: "Queens, NY", bio: "I ride for fun mostly", email: "emma@hotmail.com")
 bike1 = Bicycle.create(brand: "Kestrel", model: "Sci500", size: 52, frontG: 3, rearG: 9, gearset: "Shimano", condition: "new", user_id: 1)
 bike2 = Bicycle.create(brand: "Specialized", model: "Roubaix", size: 55, frontG: 3, rearG: 9, gearset: "Shimano", condition: "new", user_id: 2)
 bike3 = Bicycle.create(brand: "Kuota", model: "22Y", size: 53, frontG: 3, rearG: 9, gearset: "Campagnolo", condition: "new", user_id: 2)
