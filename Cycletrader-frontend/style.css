@@ -1,6 +1,6 @@
 
 body {
-    background-image: linear-gradient(to right, red , yellow);
+    background-image: linear-gradient(to right, purple , teal);
   }
 #user-bar {
     height: 15vh;
@@ -12,17 +12,17 @@ body {
   }
 
   .userInfo {
-    background-image: linear-gradient(to right, orange , yellow);
+    background-image: linear-gradient(to right, teal , yellow);
   }
 
 .yellowBar {
     text-align: center;
     font-family: starcruiser;
     text-transform:uppercase;
-    color: rgba(0, 35, 122, 0.952);
+    color: white;
     font-size: 72px;
       height: 12vh;
-      background: yellow;
+      background-image: url("https://i.ibb.co/2WHqhks/Screen-Shot-2020-10-22-at-1-52-49-PM.png");
       display: flex;
       justify-content: center;
       align-items: center;
