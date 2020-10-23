@@ -5,6 +5,7 @@ const baseUrl = "http://localhost:3000/users/"
 const baseUrlBikes = "http://localhost:3000/bicycles/"
 const userDet = document.querySelector('#detailed-info')
 
+
 const getUsers = () => {
     fetch(baseUrl)
     .then(resp => resp.json())
@@ -35,6 +36,8 @@ const renderUserDetails = user => {
     document.querySelector('#location').textContent = user.location
     document.querySelector('#bio').textContent = user.bio
     document.querySelector('#email').textContent = user.email
+    document.querySelector('#email').innerHTML += "<br>"
+    
     document.querySelector('#detailed-info').dataset.userId = user.id
 }
 
@@ -50,7 +53,7 @@ const clickHandler = () => {
             .then(renderUserDetails)
 
             const bikeUl = document.querySelector('#bikes')
-            bikeUl.innerHTML = ``
+            bikeUl.innerHTML = `MY BIKES:`
             
 
             
@@ -65,12 +68,25 @@ const clickHandler = () => {
         const renderBicycles = bicycles => {
             for(const bicycle of bicycles){
             renderBicycle(bicycle)
-            console.log(bicycle)
             if(bicycle.user_id == e.target.dataset.userId){
-                const bikeUl = document.querySelector('#bikes')
-                const bikeIns = document.createElement('li')
-                bikeIns.textContent = bicycle.model
-                bikeUl.append(bikeIns)}
+                const bikeSpan = document.querySelector('#bikes')
+                const bikeUl = document.createElement('ul')
+                bikeUl.textContent += `BRAND: ${bicycle.brand}`
+                bikeUl.innerHTML += "<br>"
+                bikeUl.innerHTML += `MODEL: ${bicycle.model}`
+                bikeUl.innerHTML += "<br>"
+                bikeUl.innerHTML += `GEARSET: ${bicycle.gearset}`
+                bikeUl.innerHTML += "<br>"
+                bikeUl.innerHTML += `FRONT CHAINRINGS: ${bicycle.frontG}`
+                bikeUl.innerHTML += "<br>"
+                bikeUl.innerHTML += `REAR COGS: ${bicycle.rearG}`
+                bikeUl.innerHTML += "<br>"
+                bikeUl.innerHTML += `CONDITION: ${bicycle.condition}`
+                console.log(bicycle.user_id)
+                
+
+                bikeSpan.append(bikeUl)
+            }
             }
         
         }
@@ -82,9 +98,19 @@ const clickHandler = () => {
         //}
         const renderBicycle = bicycle => {
             for(const bike in bicycle){
-                console.log(bike)
+                bike
             }
         }
+        document.addEventListener('click', e => {
+            if(e.target.matches('ul')){
+            const info = document.querySelector('#detailed-info')
+            info.innerHTML = ''
+            console.log(e.target)
+
+
+
+            }
+        })
         getBikes ()
     })
     
